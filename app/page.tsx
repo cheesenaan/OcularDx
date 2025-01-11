@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const [imageError, setImageError] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling the menu
 
   const toggleMenu = () => {
