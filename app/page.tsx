@@ -141,7 +141,6 @@ export default function Home() {
                   width={400}
                   height={300}
                   className="rounded-lg mb-4"
-                  onError={(e) => (e.target.style.display = "none")}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 />
                 <h4 className="text-xl font-semibold text-blue-900 mb-2">{item.title}</h4>
@@ -189,7 +188,6 @@ export default function Home() {
                   width={80}
                   height={80}
                   className="mx-auto mb-4"
-                  onError={(e) => (e.target.style.display = 'none')}
                 />
                 <h4 className="text-lg font-semibold text-blue-900">{card.title}</h4>
               </Link>
