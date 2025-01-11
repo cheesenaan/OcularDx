@@ -82,13 +82,13 @@ export default function Home() {
       {/* Introduction Section */}
       <section className="bg-white py-16 relative overflow-hidden sm:py-12">
         <div className="absolute inset-0">
-          <Image
+          {/* <Image
             src="/ophthalmic-care-bg.jpg"
             alt="Ophthalmic Care"
             layout="fill"
             objectFit="cover"
             className="opacity-20"
-          />
+          /> */}
         </div>
         <div className="container mx-auto text-center relative z-10 px-4">
           <h2 className="text-5xl font-bold mb-6 text-gray-800 animate-fadeIn">OcularDx</h2>
@@ -135,14 +135,14 @@ export default function Home() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <Image
+                {/* <Image
                   src={item.imgSrc}
                   alt={item.title}
                   width={400}
                   height={300}
                   className="rounded-lg mb-4"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                />
+                /> */}
                 <h4 className="text-xl font-semibold text-blue-900 mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-center">{item.description}</p>
               </div>
@@ -182,13 +182,13 @@ export default function Home() {
               { title: "Contact Us", href: "/contact", logo: "/contact-icon.png" },
             ].map((card, index) => (
               <Link key={index} href={card.href} className="block text-center p-4 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <Image
+                {/* <Image
                   src={card.logo}
                   alt={`${card.title} logo`}
                   width={80}
                   height={80}
                   className="mx-auto mb-4"
-                />
+                /> */}
                 <h4 className="text-lg font-semibold text-blue-900">{card.title}</h4>
               </Link>
             ))}
