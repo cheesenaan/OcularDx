@@ -18,9 +18,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-blue-900 text-white py-4 md:py-4 sm:py-2 shadow-md">
+      <header className="bg-blue-900 text-white py-2 shadow-md">
         <nav className="container mx-auto flex justify-between items-center px-4 flex-wrap">
-          <h1 className="text-2xl font-bold">OcularDx</h1>
+          <Image
+            src="/Logos_Transparent/8.png"
+            alt="OcularDx Logo"
+            width={200} // Adjusted the width
+            height={200} // Adjusted the height
+            className="w-32 h-auto" // Ensure responsive scaling
+          />
 
           {/* Hamburger Icon */}
           <div className="block lg:hidden">
@@ -38,7 +44,7 @@ export default function Home() {
           </div>
 
           {/* Navigation Links */}
-          <ul className={`hidden lg:flex lg:gap-6 text-lg mt-2 lg:mt-0 text-black lg:text-black`}>
+          <ul className={`hidden lg:flex lg:gap-6 text-lg text-black`}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/technology">Technology</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -48,6 +54,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+
 
       {/* Modal Menu */}
       {isMenuOpen && (
@@ -79,32 +86,40 @@ export default function Home() {
         </div>
       )}
 
-      {/* Introduction Section */}
-      <section className="bg-white py-16 relative overflow-hidden sm:py-12">
-        <div className="absolute inset-0">
-          {/* <Image
-            src="/ophthalmic-care-bg.jpg"
-            alt="Ophthalmic Care"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-20"
-          /> */}
-        </div>
-        <div className="container mx-auto text-center relative z-10 px-4">
-          <h2 className="text-5xl font-bold mb-6 text-gray-800 animate-fadeIn">OcularDx</h2>
-          <p className="text-lg text-gray-600 mb-4 animate-fadeIn delay-200">
-            Revolutionizing ophthalmic care with cutting-edge technology.
-          </p>
-          <p className="text-md text-gray-700 mb-8 animate-fadeIn delay-400">
-            At OcularDx, we leverage innovative solutions to ensure precise diagnostics and personalized treatment for eye health. Join us on our mission to improve vision care for everyone.
-          </p>
-          <Link href="/learn-more">
-            <span className="inline-block bg-blue-900 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer">
-              Learn More
-            </span>
-          </Link>
-        </div>
-      </section>
+      
+{/* Introduction Section */}
+<section className="bg-white py-16 relative overflow-hidden sm:py-8">
+  <div className="container mx-auto text-center relative z-10 px-4">
+
+    {/* Logo - Main Focus */}
+    <Image
+      src="/Logos_Solid/3.png"
+      alt="OcularDx Logo"
+      width={450} // Increased width for prominence
+      height={400} // Adjusted for visual focus
+      className="mx-auto mb-6 animate-bounceSlow" // Reduced bottom margin
+    />
+
+    {/* Supporting Paragraph */}
+    <p className="text-lg sm:text-xl text-gray-600 mb-3 animate-fadeIn delay-200">
+      At OcularDx, we leverage cutting-edge technology to ensure precise diagnostics 
+      and personalized treatment for eye health.
+    </p>
+    <p className="text-md sm:text-lg text-gray-700 mb-6 animate-fadeIn delay-400">
+      Join us on our mission to transform vision care and enhance the lives of millions worldwide.
+    </p>
+
+    {/* Call-to-Action Button */}
+    <Link href="/learn-more">
+      <span className="inline-block bg-blue-900 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition-transform duration-300 cursor-pointer">
+        Learn More
+      </span>
+    </Link>
+  </div>
+</section>
+
+
+
 
       {/* Technology Overview Section */}
       <section className="bg-gray-100 py-16 sm:py-12">
@@ -169,38 +184,48 @@ export default function Home() {
       </section>
 
       {/* About OcularDx Section */}
-      <section className="bg-gray-100 py-16 sm:py-12">
-        <div className="container mx-auto text-center px-4">
-          <h3 className="text-3xl font-bold mb-6 text-blue-900">About OcularDx</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Home", href: "/", logo: "/home-icon.png" },
-              { title: "Technology", href: "/technology", logo: "/tech-icon.png" },
-              { title: "About", href: "/about", logo: "/about-icon.png" },
-              { title: "News & Events", href: "/news-events", logo: "/news-icon.png" },
-              { title: "Investors", href: "/investors", logo: "/investor-icon.png" },
-              { title: "Contact Us", href: "/contact", logo: "/contact-icon.png" },
-            ].map((card, index) => (
-              <Link key={index} href={card.href} className="block text-center p-4 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                {/* <Image
-                  src={card.logo}
-                  alt={`${card.title} logo`}
-                  width={80}
-                  height={80}
-                  className="mx-auto mb-4"
-                /> */}
-                <h4 className="text-lg font-semibold text-blue-900">{card.title}</h4>
-              </Link>
-            ))}
-          </div>
+      <section className="bg-gray-100 py-8 sm:py-4">
+      <div className="container mx-auto text-center px-2">
+        <h3 className="text-3xl font-bold mb-2 text-blue-900 flex items-center justify-center">
+          About 
+          <Image
+            src="/Logos_Transparent/v2 (2).png"
+            alt="OcularDx Logo"
+            width={200} // Adjust width as needed
+            height={60} // Adjust height as needed
+            className="inline-block"
+          />
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "Home", href: "/", logo: "/home-icon.png" },
+            { title: "Technology", href: "/technology", logo: "/tech-icon.png" },
+            { title: "About", href: "/about", logo: "/about-icon.png" },
+            { title: "News & Events", href: "/news-events", logo: "/news-icon.png" },
+            { title: "Investors", href: "/investors", logo: "/investor-icon.png" },
+            { title: "Contact Us", href: "/contact", logo: "/contact-icon.png" },
+          ].map((card, index) => (
+            <Link key={index} href={card.href} className="block text-center p-4 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h4 className="text-lg font-semibold text-blue-900">{card.title}</h4>
+            </Link>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-8 sm:py-6">
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-left">
-            <Image src="/oculardx-logo.png" alt="OcularDx Logo" width={100} height={50} className="mx-auto mb-4" />
+          <Image
+            src="/Logos_Transparent/8.png"
+            alt="OcularDx Logo"
+            width={200} // Adjusted the width
+            height={200} // Adjusted the height
+            className="w-32 h-auto" // Ensure responsive scaling
+          />
             <p className="mb-2">123 Visionary Lane, Eye City, Vision State, 45678</p>
             <p className="mb-2">Email: contact@oculardx.com</p>
           </div>
@@ -217,15 +242,10 @@ export default function Home() {
           </div>
           <div className="text-left">
             <h4 className="text-lg font-bold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              <Link href="#"><Image src="/facebook-icon.png" alt="Facebook" width={24} height={24} /></Link>
-              <Link href="#"><Image src="/twitter-icon.png" alt="Twitter" width={24} height={24} /></Link>
-              <Link href="#"><Image src="/instagram-icon.png" alt="Instagram" width={24} height={24} /></Link>
-            </div>
           </div>
         </div>
         <div className="text-center mt-6">
-          <p className="text-sm">&copy; 2023 OcularDx. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 OcularDx. All rights reserved.</p>
         </div>
       </footer>
     </div>

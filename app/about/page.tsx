@@ -1,16 +1,23 @@
 // app/about/page.tsx
+import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-blue-900 text-white py-4 md:py-4 sm:py-2 shadow-md">
+      <header className="bg-blue-900 text-white py-2 shadow-md">
         <nav className="container mx-auto flex justify-between items-center px-4 flex-wrap">
-          <h1 className="text-2xl font-bold">OcularDx</h1>
+          <Image
+            src="/Logos_Transparent/8.png"
+            alt="OcularDx Logo"
+            width={200} // Adjusted the width
+            height={200} // Adjusted the height
+            className="w-32 h-auto" // Ensure responsive scaling
+          />
 
           {/* Navigation Links */}
-          <ul className="hidden lg:flex lg:gap-6 text-lg mt-2 lg:mt-0 text-white">
+          <ul className="hidden lg:flex lg:gap-6 text-lg text-black">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/technology">Technology</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -45,7 +52,7 @@ const About = () => {
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-8 sm:py-6">
         <div className="container mx-auto text-center">
-          <p className="text-sm">&copy; 2023 OcularDx. All rights reserved.</p>
+          <p className="text-sm">&copy; 2025 OcularDx. All rights reserved.</p>
         </div>
       </footer>
     </div>
